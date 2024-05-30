@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    min-height: 200vh;
+}
+
+
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    padding: 40px 80px;
+    position: fixed;
+    top: 0;
+    transition: 0.6s;
+    width: 100%;
+    z-index: 100000;
+}
+
+nav.sticky {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 100px;
+}
+
+nav .logo {
+    color: #800e13;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+
+.home {
+    background-image: url('images/beauty13.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#about {
+    background-image: url('images/beauty12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+nav .logo:hover {
+    color: #1f00cc;
+}
+
+nav.sticky .logo {
+    color: #020108;
+}
+
+nav.sticky .logo:hover {
+    color: #231942;
+}
+
+
+nav ul li a {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 15px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+nav.sticky ul li a {
+    color: #3b4219;
+}
+
+nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: .6s;
+}
+
+nav.sticky ul li:hover::after {
+    background-color: #bdb2ff;
+}
+
+
+
+.menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu li {
+    margin: 0 10px;
+    list-style: none;
+    position: relative;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #231942;
+}
+
+nav.sticky .menu li a:hover {
+    color: #bdb2ff;
+}
+
+
+
+#menu-icon {
+    color: black;
+    cursor: pointer;
+    display: none;
+    font-size: 32px;
+}
+
+#menu-icon:hover {
+    color: white;
+}
+
+nav.sticky #menu-icon {
+    color: #231942;
+}
+
+nav.sticky #menu-icon:hover {
+    color: #bdb2ff;
+}
+
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.heading {
+    font-size: 45px;
+    text-align: center;
+}
+
+
+
+
+.team {
+    background: #231942;
+    color: #5e548e;
+}
+
+.about {
+    background: #231942;
+    color: black;
+
+}
+
+.contact,
+.home,
+.services {
+    background-color: #5e548e;
+    color: black
+}
+
+p {
+    font-size: 20px;
+    margin: auto;
+    padding: 5rem;
+    text-align: justify;
+}
+
+
+
+@media screen and (max-width: 898px) {
+    .menu {
+        background: #5e548e;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+        left: 0;
+        padding: 1rem 3%;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+
+    }
+
+    .menu a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+}
+
+/* Contact Form Styles */
+
+.contact {
+    background-color: #5e548e;
+    color: white;
+    padding: 100px 0;
+}
+
+.contact .heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.form-label {
+    color: white;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #231942;
+    display: flex;
+    color: white;
+
+    margin: 0 auto;
+    text-align: center;
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5e548e;
+
+}
+
+.services {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service {
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.service button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #231942;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service button:hover {
+    background-color: #5e548e;
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services {
+
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+
+.service-item {
+    display: inline-block;
+    width: 45%;
+    /* Adjust width as needed */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.service-item h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.service-item button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service-item button:hover {
+    transform: translateY(-5px);
+    /* Move the item up slightly on hover */
+
+}
+
+.service-item:hover img {
+    filter: brightness(90%);
+    /* Reduce brightness of image on hover */
+}
+
+.service-item:hover h3 {
+    color: #1d0106;
+    /* Change heading color on hover */
+}
+
+.service-item:hover button {
+    background-color: #0056b3;
+    /* Change button background color on hover */
+}
